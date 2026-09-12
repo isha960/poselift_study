@@ -1,0 +1,22 @@
+diff --git a/utils/dataset_utils.py b/utils/dataset_utils.py
+index 0cdedb4..6c66bdf 100644
+--- a/utils/dataset_utils.py
++++ b/utils/dataset_utils.py
+@@ -14,7 +14,7 @@ def keypoints17_to_coco18(kps):
+     neck_kp_vec = 0.5 * (kp_np[..., 5, :] + kp_np[..., 6, :])
+     kp_np = np.concatenate([kp_np, neck_kp_vec[..., None, :]], axis=-2)
+     opp_order = [0, 17, 6, 8, 10, 5, 7, 9, 12, 14, 16, 11, 13, 15, 2, 1, 4, 3]
+-    opp_order = np.array(opp_order, dtype=np.int)
++    opp_order = np.array(opp_order, dtype=int)
+     kp_coco18 = kp_np[..., opp_order, :]
+     return kp_coco18
+ 
+@@ -237,7 +237,7 @@ def split_pose_to_segments(single_pose_np, single_pose_meta, single_pose_keys, s
+     pose_segs_np = np.empty([0, seg_len, kp_count, kp_dim])
+     pose_segs_meta = []
+     pose_ids_meta = []
+-    num_segs = np.ceil((clip_t - seg_len) / seg_dist).astype(np.int)
++    num_segs = np.ceil((clip_t - seg_len) / seg_dist).astype(int)
+     single_pose_keys_sorted = sorted([int(i) for i in single_pose_keys])  # , key=lambda x: int(x))
+     for seg_ind in range(num_segs):
+         start_ind = start_ofst + seg_ind * seg_dist

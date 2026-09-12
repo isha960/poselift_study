@@ -1,0 +1,6 @@
+model,auc_seed0,boot_lo,boot_med,boot_hi,note
+STG-NF,0.5808,0.4451,0.5789,0.6959,seed0; cluster bootstrap over 69 test clips
+COSKAD,0.5971,0.4841,0.5948,0.6891,seed0; cluster bootstrap over 69 test clips
+MoCoDAD,0.7205,0.6090,0.7218,0.8087,seed0; cluster bootstrap over 69 test clips
+motion-energy(speed),0.5054,0.3576,0.5021,0.6270,seed0; cluster bootstrap over 69 test clips
+motion-energy(accel),0.5082,0.3681,0.5050,0.6278,seed0; cluster bootstrap over 69 test clips

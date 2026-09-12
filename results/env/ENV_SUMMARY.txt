@@ -1,0 +1,9 @@
+host: UP-CS-GPU02
+date: 2026-08-28T19:42:40+01:00
+driver_cuda: 12.8
+gpus: 8x RTX A6000 48GB (0-3 free, 4-7 external)
+envs:
+  poselift-harness: py3.11 torch2.13.0+cpu (harness/metrics/stats/figs/FLOPs)
+  stgnf-poselift: py3.8 torch1.10.1+cu113 (STG-NF, pre-existing, reused)
+  coskad: py3.9.11 torch1.11.0+cu113 pl1.6.3 (COSKAD euclidean)
+  mocodad: py3.11 torch2.0.1 pl2.0.6 (MoCoDAD)

@@ -1,0 +1,119 @@
+Channels:
+ - pytorch
+ - nvidia
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Installing pip dependencies: ...working... Ran pip subprocess with arguments:
+['/home/isha_lodha/.conda/envs/mocodad/bin/python', '-m', 'pip', 'install', '-U', '-r', '/home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt', '--exists-action=b']
+Pip subprocess output:
+Collecting appdirs==1.4.4 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 1))
+  Obtaining dependency information for appdirs==1.4.4 from https://files.pythonhosted.org/packages/3b/00/2344469e2084fb287c2e0b57b72910309874c3245463acd6cf5e3db69324/appdirs-1.4.4-py2.py3-none-any.whl.metadata
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting docker-pycreds==0.4.0 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 2))
+  Obtaining dependency information for docker-pycreds==0.4.0 from https://files.pythonhosted.org/packages/f5/e8/f6bd1eee09314e7e6dee49cbe2c5e22314ccdb38db16c9fc72d2fa80d054/docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata
+  Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting gitdb==4.0.10 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 3))
+  Obtaining dependency information for gitdb==4.0.10 from https://files.pythonhosted.org/packages/21/a6/35f83efec687615c711fe0a09b67e58f6d1254db27b1013119de46f450bd/gitdb-4.0.10-py3-none-any.whl.metadata
+  Downloading gitdb-4.0.10-py3-none-any.whl.metadata (1.1 kB)
+Collecting gitpython==3.1.32 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 4))
+  Obtaining dependency information for gitpython==3.1.32 from https://files.pythonhosted.org/packages/67/50/742c2fb60989b76ccf7302c7b1d9e26505d7054c24f08cc7ec187faaaea7/GitPython-3.1.32-py3-none-any.whl.metadata
+  Downloading GitPython-3.1.32-py3-none-any.whl.metadata (10.0 kB)
+Collecting joblib==1.3.1 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 5))
+  Obtaining dependency information for joblib==1.3.1 from https://files.pythonhosted.org/packages/28/08/9dcdaa5aac4634e4c23af26d92121f7ce445c630efa0d3037881ae2407fb/joblib-1.3.1-py3-none-any.whl.metadata
+  Downloading joblib-1.3.1-py3-none-any.whl.metadata (5.4 kB)
+Collecting numpy==1.25.2 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 6))
+  Obtaining dependency information for numpy==1.25.2 from https://files.pythonhosted.org/packages/32/6a/65dbc57a89078af9ff8bfcd4c0761a50172d90192eaeb1b6f56e5fbf1c3d/numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+Collecting pathtools==0.1.2 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 7))
+  Downloading pathtools-0.1.2.tar.gz (11 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting protobuf==4.23.4 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 8))
+  Obtaining dependency information for protobuf==4.23.4 from https://files.pythonhosted.org/packages/01/cb/445b3e465abdb8042a41957dc8f60c54620dc7540dbcf9b458a921531ca2/protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl.metadata
+  Downloading protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl.metadata (540 bytes)
+Collecting scikit-learn==1.3.0 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 9))
+  Obtaining dependency information for scikit-learn==1.3.0 from https://files.pythonhosted.org/packages/1f/ad/9799aabeabcb9a293c87b6f96cc78655b8abc7d35560cd99007093b5d445/scikit_learn-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading scikit_learn-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting scipy==1.11.1 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 10))
+  Obtaining dependency information for scipy==1.11.1 from https://files.pythonhosted.org/packages/b8/46/1d255bb55e63de02f7b2f3a2f71b59b840db21d61ff7cd41edbfc2da448a/scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.1/59.1 kB 16.3 MB/s eta 0:00:00
+Collecting sentry-sdk==1.29.2 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 11))
+  Obtaining dependency information for sentry-sdk==1.29.2 from https://files.pythonhosted.org/packages/86/bb/ecb87fd214d5bbade07edf2ecdd829cf346e5b552689d6228112c6517286/sentry_sdk-1.29.2-py2.py3-none-any.whl.metadata
+  Downloading sentry_sdk-1.29.2-py2.py3-none-any.whl.metadata (8.8 kB)
+Collecting setproctitle==1.3.2 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 12))
+  Obtaining dependency information for setproctitle==1.3.2 from https://files.pythonhosted.org/packages/18/c7/890da8a5790fa733a9fbf47d92e8226c1ff4bf1853dbdbabbdaa3aa6dffc/setproctitle-1.3.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading setproctitle-1.3.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+Collecting smmap==5.0.0 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 13))
+  Obtaining dependency information for smmap==5.0.0 from https://files.pythonhosted.org/packages/6d/01/7caa71608bc29952ae09b0be63a539e50d2484bc37747797a66a60679856/smmap-5.0.0-py3-none-any.whl.metadata
+  Downloading smmap-5.0.0-py3-none-any.whl.metadata (4.2 kB)
+Collecting threadpoolctl==3.2.0 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 14))
+  Obtaining dependency information for threadpoolctl==3.2.0 from https://files.pythonhosted.org/packages/81/12/fd4dea011af9d69e1cad05c75f3f7202cdcbeac9b712eea58ca779a72865/threadpoolctl-3.2.0-py3-none-any.whl.metadata
+  Downloading threadpoolctl-3.2.0-py3-none-any.whl.metadata (10.0 kB)
+Collecting wandb==0.15.8 (from -r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15))
+  Obtaining dependency information for wandb==0.15.8 from https://files.pythonhosted.org/packages/ed/d7/8927aef63869d5d379adb63dc97f9cbc53830fdf85457b84a156fabcb231/wandb-0.15.8-py3-none-any.whl.metadata
+  Downloading wandb-0.15.8-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: six>=1.4.0 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from docker-pycreds==0.4.0->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 2)) (1.16.0)
+Requirement already satisfied: certifi in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from sentry-sdk==1.29.2->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 11)) (2023.7.22)
+Requirement already satisfied: urllib3>=1.26.11 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from sentry-sdk==1.29.2->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 11)) (1.26.16)
+Requirement already satisfied: Click!=8.0.0,>=7.1 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (8.1.6)
+Requirement already satisfied: requests<3,>=2.0.0 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (2.31.0)
+Requirement already satisfied: psutil>=5.0.0 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (5.9.0)
+Requirement already satisfied: PyYAML in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (6.0)
+Requirement already satisfied: setuptools in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (68.0.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from requests<3,>=2.0.0->wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /home/isha_lodha/.conda/envs/mocodad/lib/python3.11/site-packages (from requests<3,>=2.0.0->wandb==0.15.8->-r /home/isha_lodha/poselift-study/external/MoCoDAD/condaenv.jx4phg5d.requirements.txt (line 15)) (3.4)
+Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Downloading gitdb-4.0.10-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.7/62.7 kB 9.9 MB/s eta 0:00:00
+Downloading GitPython-3.1.32-py3-none-any.whl (188 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.5/188.5 kB 48.4 MB/s eta 0:00:00
+Downloading joblib-1.3.1-py3-none-any.whl (301 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.0/302.0 kB 38.3 MB/s eta 0:00:00
+Downloading numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 36.9 MB/s eta 0:00:00
+Downloading protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl (304 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 304.5/304.5 kB 39.6 MB/s eta 0:00:00
+Downloading scikit_learn-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 38.5 MB/s eta 0:00:00
+Downloading scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.2/36.2 MB 29.1 MB/s eta 0:00:00
+Downloading sentry_sdk-1.29.2-py2.py3-none-any.whl (215 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 33.4 MB/s eta 0:00:00
+Downloading setproctitle-1.3.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31 kB)
+Downloading smmap-5.0.0-py3-none-any.whl (24 kB)
+Downloading threadpoolctl-3.2.0-py3-none-any.whl (15 kB)
+Downloading wandb-0.15.8-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 14.2 MB/s eta 0:00:00
+Building wheels for collected packages: pathtools
+  Building wheel for pathtools (setup.py): started
+  Building wheel for pathtools (setup.py): finished with status 'done'
+  Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8791 sha256=060a497fff88556af3ad3deaa7b43f4eb92a8fc982ba918f7d9f29ef808f643d
+  Stored in directory: /home/isha_lodha/.cache/pip/wheels/ea/b7/8b/84e94095ea418b9442f5abeba4ca7b0ad52d3fe7b69d6238a6
+Successfully built pathtools
+Installing collected packages: pathtools, appdirs, threadpoolctl, smmap, setproctitle, sentry-sdk, protobuf, numpy, joblib, docker-pycreds, scipy, gitdb, scikit-learn, gitpython, wandb
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.25.0
+    Uninstalling numpy-1.25.0:
+      Successfully uninstalled numpy-1.25.0
+Successfully installed appdirs-1.4.4 docker-pycreds-0.4.0 gitdb-4.0.10 gitpython-3.1.32 joblib-1.3.1 numpy-1.25.2 pathtools-0.1.2 protobuf-4.23.4 scikit-learn-1.3.0 scipy-1.11.1 sentry-sdk-1.29.2 setproctitle-1.3.2 smmap-5.0.0 threadpoolctl-3.2.0 wandb-0.15.8
+
+done
+#
+# To activate this environment, use
+#
+#     $ conda activate mocodad
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+

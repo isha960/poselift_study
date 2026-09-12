@@ -1,0 +1,95 @@
+diff --git a/eval_COSKAD.py b/eval_COSKAD.py
+index da5db3d..5af8860 100644
+--- a/eval_COSKAD.py
++++ b/eval_COSKAD.py
+@@ -137,6 +137,7 @@ if __name__== '__main__':
+     
+ 
+     print('Starting evaluation.....')
++    RAW_SCORES = {}  # PATCH: (scene,clip)->[per-transform pre-smoothing per-frame score]
+     for transformation in range(num_transform):
+         # iterating over each transformation T
+         
+@@ -208,17 +209,21 @@ if __name__== '__main__':
+                 error_per_person.append(fig_reconstruction_loss)
+               
+             # aggregating the reconstruction errors for all actors in clip C, assigning the maximum error to each frame  
++            if len(error_per_person) == 0:  # PATCH: clip with no valid pose segments (tracks < seg_len)
++                error_per_person = [np.zeros(n_frames)]
+             clip_score = np.amax(np.stack(error_per_person, axis=0), axis=0)
+ 
+             if (scene_idx, clip_idx) in hr_ubnormal_masked_clips:
+                 clip_score = clip_score[hr_ubnormal_masked_clips[(scene_idx, clip_idx)]]
+                 gt = gt[hr_ubnormal_masked_clips[(scene_idx, clip_idx)]]
+                 
++            RAW_SCORES.setdefault((scene_idx, clip_idx), []).append(np.asarray(clip_score, dtype=float).copy())  # PATCH
+             clip_score = score_process(clip_score, win_size=smoothing, dataname=args.dataset_choice,use_scaler=False)
+             scenes_division[scene_idx].append(clip_score)
+             model_scores.append(clip_score)
+             dataset_gt.append(gt)
+             
++            auc = float('nan')  # PATCH: all-normal clips (split b) make roc_auc_score raise
+             try:
+                 auc=roc_auc_score(gt, clip_score)
+                 errors.append(auc)
+@@ -229,21 +234,32 @@ if __name__== '__main__':
+             if idx%1 == 0:
+                 print('transf: {}/{}, clip: {},{}/{}, score: {} average_score: {}'.format(transformation+1,num_transform, scene_clips[idx], idx+1,len(all_gts),auc,np.nanmean(np.array(errors).astype(float))))
+                 
++        if len(model_scores) == 0:
++            print('[DBG] transformation %d produced no clip scores; skipping' % transformation); continue
+         model_scores = np.concatenate(model_scores, axis=0)
+         dataset_gt = np.concatenate(dataset_gt, axis=0)
+ 
+         print('\nTest set score for transformation {}\n'.format(transformation+1))
+-        if args.dataset_choice == 'HR-Avenue':
+-            best_threshold, auc = ROC(dataset_gt, model_scores)
+-        else:
+-            best_threshold, auc = ROC(dataset_gt, model_scores, path=path+f'_t{transformation}_roc_hyp.png')
+-            print(best_threshold)
+-
+-        print('auc = {}'.format(auc))
++        try:  # PATCH: all-normal val split -> ROC() raises; dump still needs to run
++            if args.dataset_choice == 'HR-Avenue':
++                best_threshold, auc = ROC(dataset_gt, model_scores)
++            else:
++                best_threshold, auc = ROC(dataset_gt, model_scores, path=path+f'_t{transformation}_roc_hyp.png')
++                print(best_threshold)
++            print('auc = {}'.format(auc))
++        except ValueError as e:
++            print('[PATCH] transform %d ROC skipped: %s' % (transformation, e))
+ 
+         model_scores_transf[transformation] = model_scores
+         dataset_gt_transf[transformation] = dataset_gt
+ 
++    _dump = os.environ.get('COSKAD_RAW_DUMP')  # PATCH: export raw pre-smoothing per-clip scores for the shared harness
++    if _dump:
++        os.makedirs(_dump, exist_ok=True)
++        for (sc, cl), lst in RAW_SCORES.items():
++            np.save(os.path.join(_dump, f'{sc}_{cl}.npy'), np.mean(np.stack(lst, 0), 0))
++        print(f'[PATCH] dumped {len(RAW_SCORES)} raw clip score arrays to {_dump}')
++
+     # aggregating the anomaly scores for all transformations
+     pds = np.mean(np.stack(list(model_scores_transf.values()),0),0)
+     gt = dataset_gt_transf[0]
+diff --git a/models/euclidean_encoder_dynamicCenter.py b/models/euclidean_encoder_dynamicCenter.py
+index 0107ca7..9d99d49 100644
+--- a/models/euclidean_encoder_dynamicCenter.py
++++ b/models/euclidean_encoder_dynamicCenter.py
+@@ -153,14 +153,14 @@ class LitEncoder(pl.LightningModule):
+         optimizer = Adam(self.parameters(), lr=self.learning_rate)
+ 
+         scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer,
+-                                                        mode='max',
++                                                        mode='min',  # PATCHED: monitor training loss now
+                                                         factor=0.2,
+                                                         patience=2,
+                                                         min_lr=1e-6,
+                                                         verbose=True,
+                                                        )
+ 
+-        return {'optimizer':optimizer,'lr_scheduler':scheduler,'monitor':'validation_auc'}
++        return {'optimizer':optimizer,'lr_scheduler':scheduler,'monitor':'loss'}  # PATCHED: was 'validation_auc' (== test AUC when validation==test -> leakage); monitor training loss
+ 
+     def post_processing(self, hidden_out, trans, meta, frames):
+         all_gts = [file_name for file_name in os.listdir(self.args.gt_path) if file_name.endswith('.npy')]

@@ -1,0 +1,8 @@
+model,scheme,roc_auc_mean,std,n_seeds,delta_vs_default
+STG-NF,default (norm),0.6604,0.0000,4,+0.0000
+STG-NF,raw / unnormalised,0.6339,0.0575,4,-0.0265
+COSKAD,markovitz (default),0.5990,0.0000,4,+0.0000
+COSKAD,stan,0.5839,0.0019,4,-0.0151
+MoCoDAD,robust (default),0.7364,0.0000,4,+0.0000
+MoCoDAD,markovitz,0.6700,0.0288,4,-0.0664
+MoCoDAD,stan,0.7133,0.0316,4,-0.0231

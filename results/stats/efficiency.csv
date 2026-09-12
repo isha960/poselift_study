@@ -1,0 +1,4 @@
+model,params,flops_per_window,cpu_ms_median,cpu_ms_p90,windows_per_s,peak_rss_mb,note
+COSKAD (STSE encoder),239716,nan,2.151,2.226,465.0,290,"window (2,12,17); missing_keys=0; anomaly score = dist to hypersphere centre (1 fwd) | ptflops_failed:ImportError"
+STG-NF (normalizing flow),616,nan,4.880,5.132,204.9,327,"window (2,24,18); 1 flow forward (nll) | ptflops_failed:ModuleNotFoundError"
+MoCoDAD (diffusion),142294,nan,2595.8,,0.39,722,"per-window generative inference, CPU 1-thread, batch 1: n_gen=1 -> 55.3 ms; n_gen=50 (paper) -> 2595.8 ms (0.39 win/s); noise_steps=10; U-Net 72882 params, condition-encoder 69412 params"

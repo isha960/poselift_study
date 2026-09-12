@@ -1,0 +1,5 @@
+model,mean_dAUC_seeds,n_seeds,c1_margin>=0.03,c2_delong_CI_excl_0,c2_bootstrap_lb>base,c4_all_seeds_positive,verdict,note,c4_all_LOCO_folds_positive,LOCO_mean_dAUC
+COSKAD,-0.0614,4,False,False,False,False,"comparable / within noise (LOCO: fails on held-out C2,C4 -> below chance)",mean dAUC -0.061 seeds / +0.002 LOCO; direction inconsistent across seeds and folds; 2/6 held-out cameras below chance,False,-0.0144
+MoCoDAD,+0.0761,4,True,True,True,True,"OUTPERFORMS STG-NF (criteria 1,2,4 met; criterion 3 FPR-generalisation flagged)",full check: mean dAUC +0.076 (seeds) / +0.131 (LOCO folds); all 4 seeds AND all 6 LOCO folds positive; DeLong+bootstrap exclude 0; val-5% threshold realises ~7.6% test FPR (c3 caveat),True,+0.1313
+motion-energy(speed),-0.1550,4,False,True,False,False,BELOW STG-NF,full pre-registered check,,
+motion-energy(accel),-0.1521,4,False,True,False,False,BELOW STG-NF,full pre-registered check,,

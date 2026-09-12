@@ -1,0 +1,23 @@
+# Third-party cloned repos — not ours to redistribute; pinned commits are in
+# results/env/external_repo_commits.txt
+/external/
+
+# Converted / staged PoseLift keypoint data — derived from the dataset release,
+# redistribution terms unclear; regenerable from harness/convert.py + the raw
+# PoseLift release (see results/preregistration.md sec.6 for how to obtain it)
+/data_converted/
+/data_coskad/
+/data_mocodad/
+
+# Model checkpoints, per-run training/eval logs, and scratch data roots —
+# large binaries, not needed to verify the reported numbers (those live in
+# results/raw/scores/*.npz + results/stats/*.csv); reproducible via harness/*.sh
+/results/model_runs/
+
+# Python / editor / OS cruft
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.swp

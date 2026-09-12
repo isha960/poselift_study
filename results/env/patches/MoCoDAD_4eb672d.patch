@@ -1,0 +1,54 @@
+diff --git a/models/mocodad.py b/models/mocodad.py
+index 2a030bd..e334854 100644
+--- a/models/mocodad.py
++++ b/models/mocodad.py
+@@ -356,6 +356,7 @@ class MoCoDAD(pl.LightningModule):
+         hr_avenue_masked_clips = get_avenue_mask() if self.dataset_name == 'HR-Avenue' else {}
+ 
+         num_transform = self.num_transforms
++        RAW_SCORES = {}  # PATCH: (scene,clip)->[per-transform pre-smoothing per-frame score]
+         model_scores_transf = {}
+         dataset_gt_transf = {}
+ 
+@@ -396,6 +397,8 @@ class MoCoDAD(pl.LightningModule):
+                     
+                     error_per_person.append(fig_reconstruction_loss)
+             
++                if len(error_per_person) == 0:  # PATCH: clip with no valid pose segments
++                    error_per_person = [np.zeros(n_frames)]
+                 clip_score = np.stack(error_per_person, axis=0)
+                 clip_score_log = np.log1p(clip_score)
+                 clip_score = np.mean(clip_score, axis=0) + (np.amax(clip_score_log, axis=0)-np.amin(clip_score_log, axis=0))
+@@ -410,6 +413,7 @@ class MoCoDAD(pl.LightningModule):
+                     clip_score = clip_score[np.array(hr_avenue_masked_clips[clip_idx])==1]
+                     gt = gt[np.array(hr_avenue_masked_clips[clip_idx])==1]
+ 
++                RAW_SCORES.setdefault((scene_idx, clip_idx), []).append(np.asarray(clip_score, dtype=float).copy())  # PATCH
+                 clip_score = score_process(clip_score, self.anomaly_score_frames_shift, self.anomaly_score_filter_kernel_size)
+                 model_scores.append(clip_score)
+                 dataset_gt.append(gt)
+@@ -420,13 +424,22 @@ class MoCoDAD(pl.LightningModule):
+             model_scores_transf[transformation] = model_scores
+             dataset_gt_transf[transformation] = dataset_gt
+ 
++        _dump = os.environ.get('MOCODAD_RAW_DUMP')  # PATCH: export raw pre-smoothing per-clip scores
++        if _dump:
++            os.makedirs(_dump, exist_ok=True)
++            for (sc, cl), lst in RAW_SCORES.items():
++                np.save(os.path.join(_dump, f'{sc}_{cl}.npy'), np.mean(np.stack(lst, 0), 0))
++            print(f'[PATCH] dumped {len(RAW_SCORES)} raw clip score arrays to {_dump}')
++
+         # aggregating the anomaly scores for all transformations
+         pds = np.mean(np.stack(list(model_scores_transf.values()),0),0)
+         gt = dataset_gt_transf[0]
+         
+         # computing the AUC
+-        auc = roc_auc_score(gt,pds)
+-        
++        try:
++            auc = roc_auc_score(gt,pds)
++        except ValueError:
++            auc = float('nan')  # PATCH: one-class gt (not expected on split-b test)
+         return auc
+     
+     

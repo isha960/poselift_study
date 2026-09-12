@@ -1,0 +1,5 @@
+model_vs_STGNF,n_common_seeds,mean_dAUC,per_seed_dAUC,wilcoxon_p,holm_p,cliffs_delta,all_seeds_positive
+COSKAD,4,-0.0614,+0.0163;-0.1382;-0.0086;-0.1151,0.375,0.375,-0.500,False
+MoCoDAD,4,+0.0761,+0.1396;+0.0104;+0.1290;+0.0252,0.125,0.5,+0.750,True
+motion-energy(speed),4,-0.1550,-0.0755;-0.2304;-0.1014;-0.2126,0.125,0.375,-1.000,False
+motion-energy(accel),4,-0.1521,-0.0726;-0.2276;-0.0985;-0.2098,0.125,0.25,-1.000,False

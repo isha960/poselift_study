@@ -1,0 +1,238 @@
+{
+ "fold": 5,
+ "held_out_camera": 5,
+ "n_videos": 15,
+ "videos": [
+  {
+   "video": "5_101",
+   "camera": "5",
+   "n_frames": 3388,
+   "n_tracks": 6,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_101::2",
+    "5_101::4",
+    "5_101::16",
+    "5_101::19",
+    "5_101::26",
+    "5_101::34"
+   ]
+  },
+  {
+   "video": "5_202",
+   "camera": "5",
+   "n_frames": 684,
+   "n_tracks": 4,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_202::1",
+    "5_202::7",
+    "5_202::13",
+    "5_202::25"
+   ]
+  },
+  {
+   "video": "5_205",
+   "camera": "5",
+   "n_frames": 2402,
+   "n_tracks": 9,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_205::6",
+    "5_205::8",
+    "5_205::10",
+    "5_205::26",
+    "5_205::29",
+    "5_205::30",
+    "5_205::32",
+    "5_205::37",
+    "5_205::44"
+   ]
+  },
+  {
+   "video": "5_227",
+   "camera": "5",
+   "n_frames": 932,
+   "n_tracks": 16,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_227::1",
+    "5_227::2",
+    "5_227::3",
+    "5_227::23",
+    "5_227::27",
+    "5_227::29",
+    "5_227::34",
+    "5_227::36",
+    "5_227::38",
+    "5_227::41",
+    "5_227::50",
+    "5_227::55",
+    "5_227::58",
+    "5_227::63",
+    "5_227::65",
+    "5_227::67"
+   ]
+  },
+  {
+   "video": "5_229",
+   "camera": "5",
+   "n_frames": 669,
+   "n_tracks": 9,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_229::1",
+    "5_229::2",
+    "5_229::3",
+    "5_229::15",
+    "5_229::17",
+    "5_229::18",
+    "5_229::20",
+    "5_229::30",
+    "5_229::33"
+   ]
+  },
+  {
+   "video": "5_230",
+   "camera": "5",
+   "n_frames": 1780,
+   "n_tracks": 12,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_230::5",
+    "5_230::6",
+    "5_230::7",
+    "5_230::10",
+    "5_230::16",
+    "5_230::18",
+    "5_230::21",
+    "5_230::32",
+    "5_230::38",
+    "5_230::40",
+    "5_230::41",
+    "5_230::42"
+   ]
+  },
+  {
+   "video": "5_232",
+   "camera": "5",
+   "n_frames": 849,
+   "n_tracks": 7,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_232::2",
+    "5_232::3",
+    "5_232::9",
+    "5_232::11",
+    "5_232::16",
+    "5_232::18",
+    "5_232::19"
+   ]
+  },
+  {
+   "video": "5_253",
+   "camera": "5",
+   "n_frames": 210,
+   "n_tracks": 4,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_253::2",
+    "5_253::3",
+    "5_253::6",
+    "5_253::9"
+   ]
+  },
+  {
+   "video": "5_255",
+   "camera": "5",
+   "n_frames": 379,
+   "n_tracks": 3,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_255::2",
+    "5_255::3",
+    "5_255::12"
+   ]
+  },
+  {
+   "video": "5_27",
+   "camera": "5",
+   "n_frames": 1475,
+   "n_tracks": 4,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_27::8",
+    "5_27::9",
+    "5_27::10",
+    "5_27::14"
+   ]
+  },
+  {
+   "video": "5_228",
+   "camera": "5",
+   "n_frames": 61,
+   "n_tracks": 3,
+   "anomaly": true,
+   "anomaly_frames": 48,
+   "track_ids": [
+    "5_228::1",
+    "5_228::2",
+    "5_228::3"
+   ]
+  },
+  {
+   "video": "5_231",
+   "camera": "5",
+   "n_frames": 31,
+   "n_tracks": 1,
+   "anomaly": true,
+   "anomaly_frames": 10,
+   "track_ids": [
+    "5_231::1"
+   ]
+  },
+  {
+   "video": "5_254",
+   "camera": "5",
+   "n_frames": 32,
+   "n_tracks": 1,
+   "anomaly": true,
+   "anomaly_frames": 10,
+   "track_ids": [
+    "5_254::2"
+   ]
+  },
+  {
+   "video": "5_298",
+   "camera": "5",
+   "n_frames": 170,
+   "n_tracks": 1,
+   "anomaly": false,
+   "anomaly_frames": 0,
+   "track_ids": [
+    "5_298::1"
+   ]
+  },
+  {
+   "video": "5_299",
+   "camera": "5",
+   "n_frames": 15,
+   "n_tracks": 1,
+   "anomaly": true,
+   "anomaly_frames": 10,
+   "track_ids": [
+    "5_299::1"
+   ]
+  }
+ ]
+}

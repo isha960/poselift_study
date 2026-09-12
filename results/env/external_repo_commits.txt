@@ -1,0 +1,6 @@
+COSKAD         ba555533ae9a31397126d54faac7d904de7b908a  (2025-05-19 17:09:15 +0200)
+MoCoDAD        4eb672d310430ea9956ce10127ef49876f65483f  (2026-05-17 23:33:36 +0200)
+PoseLift       d1633f302bb4cd8a902f5ae89ad062c01d3aca7f  (2025-02-24 11:47:07 -0500)
+Shopformer     a089601fa5b1940d267aeb9e720f57ef65f060a9  (2025-07-05 17:43:52 -0400)
+STG-NF         edb5f3220332e160e4d20ce258787d5e2d7e0200  (2023-10-13 20:02:52 +0300)
+COSKAD re-pinned: ba55553 -> 7d9cecb (initial commit; HEAD and b292520 both broken for the euclidean-encoder path: e875137 refactor left models/stse callers incompatible, 738de05 reimplement never fixed LitEncoder wrappers)
