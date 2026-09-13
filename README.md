@@ -52,8 +52,6 @@ scored outputs are already in `results/raw/`).
 | COSKAD (Euclidean) | Deep-SVDD graph encoder | ~240K | reproduced, 4 seeds + LOCO + E2/E3 |
 | MoCoDAD | Motion-conditioned diffusion | ~142K | reproduced, 4 seeds + LOCO + E2/E3 |
 | motion-energy | Deterministic joint-speed/accel baseline | — | reproduced (harness-native) |
-| Shopformer | Transformer + GCAE tokenizer | — | **not reproduced** — official repo has the code deleted post-publication (only the tokenizer half survives in git history); cited only |
-| GEPC / TSGAD | — | — | cited only (numbers from their papers, not re-run) |
 
 ## Experiments
 
