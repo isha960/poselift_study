@@ -1,0 +1,3 @@
+model,n_anomalous_events,n_detected,n_missed,threshold_self_ref_5pct_fpr
+STG-NF,41,8,33,7.028805661201477
+MoCoDAD,41,9,32,1.247164788195781
