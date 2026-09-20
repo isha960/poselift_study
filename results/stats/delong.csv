@@ -1,5 +1,5 @@
-model_vs_STGNF,auc_model,auc_stgnf,auc_diff,ci95_lo,ci95_hi,p,note
-COSKAD,0.5971,0.5808,0.0163,-0.0024,0.0349,0.08692,seed0; DeLong on pooled test frames
-MoCoDAD,0.7205,0.5808,0.1396,0.1235,0.1557,9.66e-65,seed0; DeLong on pooled test frames
-motion-energy(speed),0.5054,0.5808,-0.0755,-0.0936,-0.0573,4.156e-16,seed0; DeLong on pooled test frames
-motion-energy(accel),0.5082,0.5808,-0.0726,-0.0908,-0.0544,6.042e-15,seed0; DeLong on pooled test frames
+model_vs_STGNF,auc_model,auc_stgnf,auc_diff,ci95_lo,ci95_hi,p,note,holm_p
+COSKAD,0.5971,0.5808,0.0163,-0.0024,0.0349,0.08692,seed0; DeLong on pooled test frames,0.08692
+MoCoDAD,0.7205,0.5808,0.1396,0.1235,0.1557,9.66e-65,seed0; DeLong on pooled test frames,3.864e-64
+motion-energy(speed),0.5054,0.5808,-0.0755,-0.0936,-0.0573,4.156e-16,seed0; DeLong on pooled test frames,1.247e-15
+motion-energy(accel),0.5082,0.5808,-0.0726,-0.0908,-0.0544,6.042e-15,seed0; DeLong on pooled test frames,1.208e-14

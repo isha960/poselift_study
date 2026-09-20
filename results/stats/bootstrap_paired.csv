@@ -1,0 +1,5 @@
+model_a,model_b,seed,auc_a,auc_b,diff,ci95_lo,ci95_hi,p_boot_uncorrected,n_valid_resamples,note,holm_p
+MoCoDAD,STG-NF,0,0.7205,0.5808,+0.1396,+0.0220,+0.2607,0.014,2000,"paired cluster bootstrap, same 69-clip resample applied to both models, N_BOOT=2000",0.056
+COSKAD,STG-NF,0,0.5971,0.5808,+0.0163,-0.1167,+0.1517,0.841,2000,"paired cluster bootstrap, same 69-clip resample applied to both models, N_BOOT=2000",1
+motion-energy(speed),STG-NF,0,0.5054,0.5808,-0.0755,-0.2424,+0.0872,0.348,2000,"paired cluster bootstrap, same 69-clip resample applied to both models, N_BOOT=2000",1
+motion-energy(accel),STG-NF,0,0.5082,0.5808,-0.0726,-0.2401,+0.0868,0.362,2000,"paired cluster bootstrap, same 69-clip resample applied to both models, N_BOOT=2000",1
